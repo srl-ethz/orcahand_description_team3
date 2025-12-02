@@ -407,6 +407,31 @@
          <material name="white"/>
       </collision>
    </link>
+   <link name="${prefix}thumb_dp_sensor_1">
+      <inertial>
+         <origin xyz="0.00233 1e-05 0.01133" rpy="0.00075 0.08211000000000013 0.00013000000000000002"/>
+         <mass value="0.0132"/>
+         <inertia ixx="1.4e-06" iyy="1.37e-06" izz="4.4e-07" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_thumb_dp_1_skin_mesh">
+         <origin xyz="${s * 0.002793435568551968} -6.14386555467744e-07 0.016601042013200628" rpy="3.141592653589793 ${s * -0.40239793279263236} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/thumb_dp_1_skin_mesh.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="red"/>
+      </visual>
+      <collision name="${prefix}collision_thumb_dp_1_skin_mesh">
+         <origin xyz="${s * 0.002785448336058668} -6.944475247259374e-06 0.016557497442018437" rpy="3.141592653589793 ${s * -0.3963953079219906} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/thumb_dp_1_skin_mesh.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="green"/>
+      </collision>
+   </link>
    <link name="${prefix}thumb_dip_jointbody">
       <inertial>
          <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -424,6 +449,11 @@
    <joint type="fixed" name="${prefix}thumb_dip_offset">
       <parent link="${prefix}thumb_dip_jointbody"/>
       <child link="${prefix}thumb_dp"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_joint_1">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_1"/>
       <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
    </joint>
    <link name="${prefix}thumb_fingertip">
@@ -1160,5 +1190,11 @@
    </joint>
    <material name="white">
       <color rgba="1 1 1 1"/>
+   </material>
+   <material name="red">
+      <color rgba="1 0 0 1"/>
+   </material>
+   <material name="green">
+      <color rgba="0 1 0 1"/>
    </material>
 </robot>
