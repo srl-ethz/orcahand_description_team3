@@ -456,6 +456,71 @@
       <child link="${prefix}thumb_dp_sensor_1"/>
       <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
    </joint>
+   <!-- <joint type="fixed" name="${prefix}thumb_dip_sensor_2_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_3_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_4_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_5_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_6_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_7_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_7"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_8_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_8"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_9_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_9"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_10_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_10"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_11_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_11"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_12_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_12"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_13_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_13"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}thumb_dip_sensor_14_joint">
+      <parent link="${prefix}thumb_dip_jointbody"/>
+      <child link="${prefix}thumb_dp_sensor_14"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint> -->
    <link name="${prefix}thumb_fingertip">
       <inertial>
          <origin xyz="-0.003 0.0 0.025" rpy="0.0 0.0 0.0"/>
@@ -781,7 +846,7 @@
       <visual name="${prefix}visual_middle_ip_skin_mesh">
          <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
          <geometry>
-            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh.stl"
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_base.stl"
             scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
             />
          </geometry>
@@ -790,11 +855,361 @@
       <collision name="${prefix}collision_middle_ip_skin_mesh">
          <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
          <geometry>
-            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh.stl"
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_base.stl"
             scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
             />
          </geometry>
          <material name="white"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_1">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_1.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_2.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_2">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_2.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_2.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_3">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_3.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_3.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_4">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_4.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_4.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_5">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_5.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_5.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_6">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_6.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_6.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_7">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_7.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_7.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_8">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_8.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_8.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_9">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_9.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_9.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="magenta"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_10">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_10.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_10.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_11">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_11.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_11.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_12">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_12.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_12.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="blue"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_13">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_13.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="yellow"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_13.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </collision>
+   </link>
+   <link name="${prefix}middle_ip_sensor_14">
+      <inertial>
+         <origin xyz="${s * 0.00071} 1e-05 0.01929" rpy="-0.00042000000000000023 ${s * -0.18548999999999993} ${s * 0.004400000000000001}"/>
+         <mass value="1e-8"/>
+         <inertia ixx="1e-8" iyy="1e-8" izz="1e-8" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="${prefix}visual_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006177579160319044} -2.8394632435300543e-07 0.02298191534250252" rpy="0.0 ${s * -0.4563594541722644} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/visual/middle_ip_skin_mesh_surface_14.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
+      </visual>
+      <collision name="${prefix}collision_middle_ip_skin_mesh">
+         <origin xyz="${s * 0.0006216739383467692} 2.432607491983251e-06 0.02302104994067657" rpy="0.0 ${s * -0.4457042297154219} 0.0"/>
+         <geometry>
+            <mesh filename="${rospackage_path}/collision/middle_ip_skin_mesh_surface_14.stl"
+            scale="${'-1 1 1' if chirality == 'left' else '1 1 1'}"
+            />
+         </geometry>
+         <material name="cyan"/>
       </collision>
    </link>
    <link name="${prefix}middle_pip_jointbody">
@@ -816,7 +1231,77 @@
       <child link="${prefix}middle_ip"/>
       <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
    </joint>
-      <link name="${prefix}middle_fingertip">
+   <joint type="fixed" name="${prefix}middle_pip_sensor_1_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_2_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_3_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_4_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_5_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_6_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_7_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_7"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_8_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_8"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_9_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_9"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_10_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_10"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_11_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_11"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_12_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_12"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_13_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_13"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="${prefix}middle_pip_sensor_14_joint">
+      <parent link="${prefix}middle_pip_jointbody"/>
+      <child link="${prefix}middle_ip_sensor_14"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="${prefix}middle_fingertip">
       <inertial>
          <origin xyz="${s * -0.009} 0.0 0.035" rpy="0.0 0.0 0.0"/>
          <mass value="0.0"/>
@@ -1197,4 +1682,16 @@
    <material name="green">
       <color rgba="0 1 0 1"/>
    </material>
+   <material name="cyan">
+        <color rgba="0 1 1 1"/>
+    </material>
+    <material name="magenta">
+        <color rgba="1 0 1 1"/>
+    </material>
+    <material name="yellow">
+        <color rgba="1 1 0 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
 </robot>
