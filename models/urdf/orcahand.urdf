@@ -596,66 +596,79 @@
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_2_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_3_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_3"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_4_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_4"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_5_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_5"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_6_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_6"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_7_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_7"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_8_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_8"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_9_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_9"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_10_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_10"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_11_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_11"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_12_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_12"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_thumb_dip_sensor_13_joint" type="fixed">
     <parent link="right_thumb_dip_jointbody"/>
     <child link="right_thumb_dp_sensor_13"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <!-- <joint type="fixed" name="${prefix}thumb_dip_sensor_14_joint">
       <parent link="${prefix}thumb_dip_jointbody"/>
@@ -1280,71 +1293,85 @@
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_2_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_3_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_3"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_4_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_4"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_5_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_5"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_6_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_6"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_7_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_7"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_8_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_8"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_9_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_9"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_10_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_10"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_11_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_11"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_12_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_12"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_13_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_13"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <joint name="right_middle_pip_sensor_14_joint" type="fixed">
     <parent link="right_middle_pip_jointbody"/>
     <child link="right_middle_ip_sensor_14"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0 -0.0"/>
+    <dont_collapse>true</dont_collapse> 
   </joint>
   <link name="right_middle_fingertip">
     <inertial>
